@@ -1,0 +1,278 @@
+/*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+    CSS Variable File
+
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*/
+
+@import url("./variables.css");
+
+/* font-family: 'Inter', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+    Helping Classes
+
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*/
+
+body{
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin-bottom: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-text);
+}
+
+
+
+.gree-icon{
+    color: #66BAB5;
+}
+
+
+
+
+
+
+/* Buttons */
+.btn{
+    color: var(--dark-text);
+    font-weight: 600;
+}
+.btn:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn:hover{
+    color: var(--primary);
+}
+.btn-light{
+    display: block;
+    background-color: var(--btn-light);
+    color: var(--dark-text);
+    padding: 15px 16px;
+    height: 48px;
+    border-color: var(--btn-light);
+    transition: 0.3s all ease;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+.btn-light:hover{
+    background-color: var(--btn-light);
+    color: var(--dark-text);
+    filter: brightness(90%);
+}
+
+.btn-primary{
+    display: block;
+    background-color: var(--primary);
+    color: var(--white)!important;
+    padding: 15px 16px;
+    height: 48px;
+    border-color: var(--primary);
+    transition: 0.3s all ease;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+.btn-primary:hover{
+    background-color: var(--primary);
+    color: var(--white);
+    filter: brightness(90%);
+}
+
+.btn-light-green{
+    display: block;
+    background-color: var(--btn-light-gree);
+    color: var(--dark-text)!important;
+    padding: 15px 16px;
+    height: 48px;
+    border-color: var(--btn-light-gree);
+    transition: 0.3s all ease;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+.btn-light-green:hover{
+    background-color: var(--btn-light-gree);
+    color: var(--dark-text);
+    filter: brightness(90%);
+}
+
+.btn-white{
+    background-color: var(--white);
+    color: var(--dark-text)!important;
+    padding: 15px 16px;
+    height: 48px;
+    border-color: var(--dark-text);
+    transition: 0.3s all ease;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+.btn-white:hover{
+    background-color: var(--white);
+    color: var(--dark-text);
+    filter: brightness(90%);
+}
+
+
+
+/* #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+    Navbar CSS
+
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*/
+#main-nav{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#main-nav .nav-item .heading{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 40px;
+    color: var(--dark-text);
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+#main-nav .navbar-brand{
+    border-right: 1px solid #EBEBEB;
+    padding-right: 20px;
+}
+/* .nav-link{
+    color: var(--black);
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+} */
+/* .nav-link:hover{
+    color: var(--orange)!important;
+} */
+/* .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--orange)!important;
+} */
+
+
+
+
+/* #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+    Main CSS
+
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*/
+.question-no{
+    background-color: var(--btn-light);
+    padding: 20px 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+    max-height: 60px;
+    left: 8px;
+    width: 53px;
+    z-index: 1;
+}
+.question-no p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.main-question-box{
+    
+    min-height: 448px;
+    background-color: var(--white);
+    width: 838px;
+    /* -webkit-box-pack: justify; */
+    /* justify-content: space-between; */
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: default;
+    border: 1.5px solid rgb(95, 38, 155);
+    z-index: 2;
+}
+.main-question-padding-box{
+    padding: 20px 30px;
+}
+.question-text-area{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 95%;
+    min-height: 50px;
+    max-height: 350px;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.ansers-mcqs,
+.answers-mcqs{
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 30px;
+}
+.ansers-mcqs label,
+.answers-mcqs label{
+    font-size: 13px;
+    color: #858585;
+}
+.ansers-mcqs .form-control,
+.answers-mcqs .form-control{
+    border: none;
+
+}
+.ansers-mcqs .form-control:focus,
+.answers-mcqs .form-control:focus{
+    box-shadow: none;
+    outline: none;
+}
+.ansers-mcqs .form-control:focus .ansers-mcqs,
+.answers-mcqs .form-control:focus .answers-mcqs{
+    border-bottom: 1.5px solid var(--primary);
+}
+.ansers-mcqs .input-group-text,
+.answers-mcqs .input-group-text{
+    background: transparent;
+    border: none;
+}
+.ansers-mcqs .input-group-text a,
+.answers-mcqs .input-group-text a{
+    color: var(--primary);
+    font-size: 13px;
+}
+.add-answer-btn{
+    display: initial;
+    margin-left: 80px;
+}
+.question-footer{
+    background-color: #FBFBFB;
+    width: 100%;
+    padding: 30px 30px 30px 30px;
+    margin-top: 50px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.question-footer p{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
