@@ -1,8 +1,22 @@
 @media only screen and (max-width: 1200px){
-
+    .sub-question-main-div-margin-left {
+        margin-left: 288px;
+    }
 }
-@media only screen and (max-width: 991px){
-    
+@media only screen and (max-width: 992px){
+    .main-question-box{
+        width: 100%;
+        height: auto;
+    }
+    #sub-question-box{
+        width: 100%;
+    }
+    .sub-question-main-div-margin-left {
+        margin-left: 0px;
+    }
+    .answer-container{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 768px){

@@ -105,7 +105,7 @@ p{
     border-color: var(--btn-light-gree);
     transition: 0.3s all ease;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 20px;
     letter-spacing: -0.02em;
 }
@@ -206,7 +206,7 @@ p{
     border-radius: 8px;
     box-sizing: border-box;
     cursor: default;
-    border: 1.5px solid rgb(95, 38, 155);
+    border: 1.5px solid var(--primary);
     z-index: 2;
 }
 .main-question-padding-box{
@@ -275,4 +275,183 @@ p{
 .question-footer p{
     font-size: 13px;
     margin-bottom: 10px;
+}
+
+
+/* Timeline */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary);
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    margin-left: -6px;
+  }
+  
+  /* Container around content */
+  .answer-container {
+    padding: 10px 40px 10px 0px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .answer-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--white);
+    border: 4px solid var(--primary);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 25%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--white);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--white);
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--white);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--white) transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 50px 30px 20px 0px;
+    background-color: var(--white);
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .answer-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .answer-container::before {
+    left: 60px;
+    border: medium solid var(--white);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--white) transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+
+
+
+.content .form-select{
+    z-index: 99;
+}
+.content .form-select:focus{
+    box-shadow: none;
+    outline: none;
+}
+#sub-question-box{
+    width: 650px;
+}
+.sub-question-main-div-margin-left{
+    margin-left: 160px;
+    margin-top: -5px;
+    z-index: 1;
+}
+.sub-answers-mcqs{
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 30px;
+}
+.sub-answers-mcqs label,
+.answers-mcqs label{
+    font-size: 13px;
+    color: #858585;
+}
+.sub-answers-mcqs .form-control{
+    border: none;
+
+}
+.sub-answers-mcqs .form-control:focus{
+    box-shadow: none;
+    outline: none;
+}
+.sub-answers-mcqs .form-control:focus .sub-answers-mcqs{
+    border-bottom: 1.5px solid var(--primary);
+}
+.sub-answers-mcqs .input-group-text{
+    background: transparent;
+    border: none;
+}
+.sub-answers-mcqs .input-group-text a{
+    color: var(--primary);
+    font-size: 13px;
+}
+.add-sub-answer-btn{
+    display: initial;
+    margin-left: 80px;
 }

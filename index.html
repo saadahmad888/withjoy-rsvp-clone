@@ -177,6 +177,125 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12">
+                            <div class="timeline">
+                                <div class="answer-container right">
+                                  <div class="content">
+                                    <div class="input-group ">
+                                        <label class="input-group-text" for="inputGroupSelect01">If</label>
+                                        <select class="form-select" id="inputGroupSelect01">
+                                          <option selected>Choose...</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                      <div class="d-flex justify-content-center sub-question-main-div-margin-left">
+                                        <div class="d-flex">
+                                            <div class="question-no">
+                                                <p>
+                                                    <i class="far fa-ellipsis-v"></i><i class="far fa-ellipsis-v"></i>
+                                                </p>
+                                            </div>
+                                            <div class="main-question-box" id="sub-question-box">
+                                                <div class="main-question-padding-box">
+                                                    <div class="d-flex mb-5">
+                                                        <div class="me-4">
+                                                            <a class="btn btn-light-green" href="">
+                                                                <i class="fal fa-user-check gree-icon me-2"></i>Attendance
+                                                            </a>
+                                                        </div>
+                                                        <div class="w-75 mt-1">
+                                                            <textarea placeholder="Please fill in your question here"
+                                                                class="question-text-area" style="height: 50px;"
+                                                                spellcheck="false">Will you be able to join us at our wedding? Kindly reply by the date of ____.</textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ansers-mcqs">
+                                                        <label class="form-label">Attending answer</label>
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" placeholder="Choice 1">
+                                                            <span class="input-group-text">
+                                                                <a href="">
+                                                                    Ask follow-up question
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ansers-mcqs">
+                                                        <label class="form-label">Declining answer</label>
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" placeholder="Choice 2">
+                                                            <span class="input-group-text">
+                                                                <a href="">
+                                                                    Ask follow-up question
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+        
+        
+                                                    <div class="embedded-sub-answers-container">
+                                                        <!-- Embedded code will be added here -->
+                                                    </div>
+        
+                                                    <div class="sub-answers-mcqs" style="display: none;">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" id="new-choice" class="form-control"
+                                                                placeholder="New Choice">
+                                                            <span class="input-group-text">
+                                                                <a href="#" class="delete-sub-answer-btn">
+                                                                    <i class="fal fa-times"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn add-sub-answer-btn mb-3"><i class="fal fa-plus me-2"></i>
+                                                        Add answer choice</a>
+                                                </div>
+                                                <div class="question-footer">
+                                                    <div class="row d-flex align-items-center">
+                                                        <div class="col-lg-8 col-md-6 col-12">
+                                                            <div class="">
+                                                                <p>Ask once per</p>
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option selected>Select One...</option>
+                                                                    <option value="1">Household</option>
+                                                                    <option value="2">Indiviual</option>
+                                                                  </select>
+                                                                <!-- <a class="btn btn-white w-100 d-flex justify-content-between"
+                                                                    href="">
+                                                                    <span>Indiviual</span> <i
+                                                                        class="fal fa-angle-down ms-2"></i>
+                                                                </a> -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3 col-md-6 col-12">
+                                                            <div class="">
+                                                                <p>Guest list column</p>
+                                                                <a class="btn btn-white w-100" href="">
+                                                                    Name <i class="fa fa-edit ms-2"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-1 col-md-6 col-12">
+                                                            <div class="mt-4">
+                                                                <a class="btn text-danger text-center" href="">
+                                                                    <i class="fal fa-trash"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <h2>2016</h2>
+                                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p> -->
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -215,6 +334,24 @@
             $(document).on('click', '.delete-answer-btn', function (e) {
                 e.preventDefault();
                 $(this).closest('.answers-mcqs').remove(); // Remove the corresponding embedded MCQ block
+            });
+        });
+        // Sub Question Box
+        $(document).ready(function () {
+            // Handle click event of "Add answer" link
+            $('.add-sub-answer-btn').on('click', function (e) {
+                e.preventDefault();
+                var $answerMCQ = $('.sub-answers-mcqs').clone(); // Clone the entire MCQ block
+                $answerMCQ.show(); // Show the cloned block (it was initially hidden)
+                $answerMCQ.find('.add-sub-answer-btn').text('Delete answer'); // Change the link text to "Delete answer"
+                $answerMCQ.find('.add-sub-answer-btn').removeClass('add-sub-answer-btn').addClass('delete-sub-answer-btn'); // Change class for further identification
+                $('.embedded-sub-answers-container').empty().append($answerMCQ); // Empty the container and append the cloned block
+            });
+
+            // Handle click event of "Delete answer" link
+            $(document).on('click', '.delete-sub-answer-btn', function (e) {
+                e.preventDefault();
+                $(this).closest('.sub-answers-mcqs').remove(); // Remove the corresponding embedded MCQ block
             });
         });
     </script>
